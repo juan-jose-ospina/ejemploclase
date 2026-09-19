@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Calc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculadora" aria-label="Calculadora">
+    <header class="cabecera">
+      <h1>Pixel Calc</h1>
+      <p class="estado" id="estado" data-estado="verificando">
+        <span class="punto" aria-hidden="true"></span>
+        <span id="estado-texto">Conectando…</span>
+      </p>
+    </header>
+
+    <section class="pantalla" aria-live="polite" aria-atomic="true">
+      <div class="expresion" id="expresion"></div>
+      <div class="valor" id="valor">0</div>
+    </section>
+
+    <div class="teclas" id="teclas">
+      <button class="tecla fn" data-accion="limpiar" aria-label="Borrar todo">C</button>
+      <button class="tecla fn" data-accion="borrar" aria-label="Borrar último dígito">DEL</button>
+      <button class="tecla fn" data-accion="signo" aria-label="Cambiar signo">+/-</button>
+      <button class="tecla op" data-accion="operador" data-valor="÷" aria-label="Dividir" aria-pressed="false">÷</button>
+
+      <button class="tecla" data-accion="digito" data-valor="7">7</button>
+      <button class="tecla" data-accion="digito" data-valor="8">8</button>
+      <button class="tecla" data-accion="digito" data-valor="9">9</button>
+      <button class="tecla op" data-accion="operador" data-valor="×" aria-label="Multiplicar" aria-pressed="false">×</button>
+
+      <button class="tecla" data-accion="digito" data-valor="4">4</button>
+      <button class="tecla" data-accion="digito" data-valor="5">5</button>
+      <button class="tecla" data-accion="digito" data-valor="6">6</button>
+      <button class="tecla op" data-accion="operador" data-valor="-" aria-label="Restar" aria-pressed="false">-</button>
+
+      <button class="tecla" data-accion="digito" data-valor="1">1</button>
+      <button class="tecla" data-accion="digito" data-valor="2">2</button>
+      <button class="tecla" data-accion="digito" data-valor="3">3</button>
+      <button class="tecla op" data-accion="operador" data-valor="+" aria-label="Sumar" aria-pressed="false">+</button>
+
+      <button class="tecla ancha" data-accion="digito" data-valor="0">0</button>
+      <button class="tecla" data-accion="punto" aria-label="Punto decimal">.</button>
+      <button class="tecla igual" data-accion="igual" aria-label="Calcular">=</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
